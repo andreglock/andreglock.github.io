@@ -1,0 +1,341 @@
+$bg-color: #212529;
+$text-color: #AB9F8D; $navbar-dark-brand-color: $text-color;
+$text-color-shadow: #cfc0aa88;
+$bgt-color: #21252998;
+$text-shadow: #3F3A32;
+$sharp-shadow: #7B7162;
+
+// This is where you can import other stylesheets or write your scss code
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 56px;
+    font-family: sans-serif;
+}
+
+section, footer {
+    padding-top: 56px;
+}
+
+main {
+    background-color: $bg-color;
+    color: $text-color;
+    min-height: 100vh;
+}
+
+.languages {
+    li {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 60%;
+    }
+}
+
+.hero {
+    display: flex;
+    .swing {
+        flex-grow: 1;
+        flex-basis: 150px;
+        h1 {
+            animation: swing linear 5s infinite;
+            overflow: hidden;
+        }
+    }
+
+    .swing:hover h1, .swing:active h1 {
+        animation-play-state: paused;
+    }
+
+    .heroimg {
+        width: 180px;
+        height: 300px;
+        animation: infinite bg-circle 4s;
+        background-image: radial-gradient(circle, transparent 0%, $bg-color 60%, $bg-color 100%), url(./images/hero1.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 0, -40px;
+    }
+    .herowrap, .heroimg, .heromask {
+        overflow: hidden;
+    }
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    33% {
+        transform: translate(0, 50px);
+    }
+  
+    66% {
+        transform: translate(0, -50px);
+    }
+}
+
+.pages {    
+    width: 90vw;
+    a {      
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 67.5vw;
+        margin-top: 10px;
+        .frame {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            border-radius: 5px;
+            .inner {
+                width: 100%;
+                height: 100%;
+                background-color: $bgt-color;
+                h3, p {
+                    text-align: center;
+                    color: $text-color;
+                    text-shadow: 0 3px 3px $text-shadow, 0 -3px 3px $text-shadow, 3px 0 3px $text-shadow, -3px 0 3px $text-shadow;
+                }
+                hr {
+                    color: $text-color;
+                    height: 2px;
+                }
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+#social {
+    padding-bottom: 3rem;
+    a {
+        color: $text-color;
+        i {
+            font-size: 3rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .hero .heroimg {
+        width: 100%;
+        background-image: url(./images/hero1.gif);
+        background-size: 67.5%;
+        background-position-x: 68%;
+        animation: none;
+        .heromask {
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 60%, transparent 0%, $bg-color 57%, $bg-color 100%);
+        }
+    }
+
+    .hero .herowrap {
+        width: 370px;
+        animation: infinite bg-sharp 7s cubic-bezier(.4,.6,.6,.4);
+    }
+
+    .languages {
+        margin-left: 10%;
+    }
+    
+    #work h2, #social h2 {
+        margin-left: 10%;
+    }
+
+    .pages {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a {
+            width: 344px;
+            height: 258px;
+            margin: 10px auto;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .swing h1 {
+        text-shadow: 7px 0 10px transparent, 0 -7px 10px transparent, 0 7px 10px transparent, -7px 0 10px transparent;
+        transition: 300ms;
+    }
+
+    .swing:hover h1, .swing:active h1 {
+        text-shadow: 7px 0 10px $sharp-shadow, 0 -7px 10px $sharp-shadow, 0 7px 10px $sharp-shadow, -7px 0 10px $sharp-shadow;
+    }
+    
+    .hero .heroimg, .hero .herowrap {
+        width: 500px;
+        height: 405px;
+        .heromask {
+            background-image: radial-gradient(circle at 60%, transparent 0%, $bgt-color 30%, $bg-color 57%, $bg-color 100%);
+        }
+    }
+
+    .pages a { 
+        width: 420px;
+        height: 315px;
+        .frame {
+            overflow: hidden;
+            .inner {
+                height: 422px;
+                width: 102%;
+                margin-left: -1%;
+                transform: translateY(421px);
+                transition: 300ms;
+                p {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    .pages a:hover { 
+        .frame .inner {
+            transform: translateY(-1px);    
+        }
+    }
+
+    #social a {
+        text-shadow: 7px 0 10px transparent, 0 -7px 10px transparent, 0 7px 10px transparent, -7px 0 10px transparent;
+        transition: 300ms;
+    }
+
+    #social a:hover {
+        text-shadow: 7px 0 10px $sharp-shadow, 0 -7px 10px $sharp-shadow, 0 7px 10px $sharp-shadow, -7px 0 10px $sharp-shadow;
+    }
+
+/* animation on h1 */
+    .swing h1:hover {
+        color: $text-shadow;
+        background-color: $text-color;
+        box-shadow: 0 0 20px $text-color-shadow, 0 0 80px $text-color-shadow, 0 0 160px $text-color-shadow,
+        0 0 320px $text-color-shadow;
+        border-radius: 60px;
+        transition-delay: 1500ms;
+    }
+    
+    .swing h1 > span {
+        position: absolute;
+        display: block;
+    }
+    
+    .swing h1 > span:nth-child(1) {
+        top: 0;
+        transform: translateX(-118%);
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, $text-color);
+    }
+    
+    .swing h1:hover > span:nth-child(1) {
+        transform: translateX(100%);
+        transition: 1500ms;
+    }
+    
+    .swing h1 > span:nth-child(2) {
+        top: calc(100% - 4px);
+        transform: translateX(100%);
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(270deg, transparent, $text-color);
+    }
+    
+    .swing h1:hover > span:nth-child(2) {
+        transform: translateX(-115%);
+        transition: 1500ms 750ms;
+    }
+    
+    .swing h1 > span:nth-child(3) {
+        left: calc(100% - 4px);
+        transform: translateY(-138%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, $text-color);
+    }
+    
+    .swing h1:hover > span:nth-child(3) {
+        transform: translateY(100%);
+        transition: 1500ms 375ms;
+    }
+    
+    .swing h1 > span:nth-child(4) {
+        left: 0;
+        transform: translateY(100%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, $text-color);
+    }
+    
+    .swing h1:hover > span:nth-child(4) {
+        transform: translateY(-130%);
+        transition: 1500ms 1125ms;
+    }
+
+}
+
+@keyframes bg-circle {
+    
+    0%, 100% { 
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: $text-shadow;
+    }
+}
+
+@keyframes bg-sharp {
+    
+    0%, 100% { 
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: $text-color;
+    }
+}
+
+/* image ratio 4:3 */
+/* #memoryHighscores {
+    background-image: url(../images/memoryHighscores.png);
+}
+
+#movieapp {
+    background-image: url(../images/MovieReactApp.png);
+}
+
+#codelicious {
+    background-image: url(../images/codelicious.png);
+}
+
+#germanquiz {
+    background-image: url(../images/GermanQuiz.png);
+}
+
+#bangwa {
+    background-image: url(../images/bangwa.png);
+}
+
+#drcarrot {
+    background-image: url(../images/drcarrot.png);
+}
+
+#animations {
+    background-image: url(../images/animations.png);
+}
+
+#functions {
+    background-image: url(../images/functions.png);
+}
+
+#design {
+    background-image: url(../images/design.png);
+} */
