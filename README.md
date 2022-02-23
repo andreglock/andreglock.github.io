@@ -4,8 +4,6 @@ Hello I'm André, I'm a Web Developer and this is my portfolio page.
 
 ## Useful Commands
 
-## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
