@@ -5,7 +5,7 @@ export default function Navigation () {
     return <header className="fixed-top">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <a className="navbar-brand" id="andre" href="#">André</a>
+                <a className="navbar-brand" id="andre" href="/#">André</a>
                 <button 
                     className="navbar-toggler" 
                     type="button" 
@@ -23,22 +23,22 @@ export default function Navigation () {
                 >
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" id="about-btn" href="#about">
+                            <a className="nav-link" aria-current="page" id="about-btn" href="/#about">
                                 <FontAwesomeIcon icon={faUser} /> About Me
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" id="skills-btn" href="#skills">
+                            <a className="nav-link" id="skills-btn" href="/#skills">
                                 <FontAwesomeIcon icon={faCode} /> Skills
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" id="work-btn" href="#work">
+                            <a className="nav-link" id="work-btn" href="/#work">
                                 <FontAwesomeIcon icon={faBriefcase} /> Work
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" id="social-btn" href="#social">
+                            <a className="nav-link" id="social-btn" href="/#contact">
                                 <FontAwesomeIcon icon={faAddressCard} /> Contact
                             </a>
                         </li>

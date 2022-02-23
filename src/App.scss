@@ -32,7 +32,7 @@ main {
         display: flex;
         justify-content: space-between;
         list-style: none;
-        width: 60%;
+        width: 80%;
     }
 }
 
@@ -112,14 +112,55 @@ main {
     }
 }
 
-#social {
+#contact {
     padding-bottom: 3rem;
     a {
         color: $text-color;
-        i {
+        transition: 300ms;
+        filter: drop-shadow(7px 0 10px transparent) drop-shadow(0 -7px 10px transparent) 
+                drop-shadow(0 7px 10px transparent) drop-shadow(-7px 0 10px transparent);
+        svg {
             font-size: 3rem;
         }
     }
+
+    a:hover {
+        filter: 
+            drop-shadow(7px 0 10px $sharp-shadow) drop-shadow(0 -7px 10px $sharp-shadow) 
+            drop-shadow(0 7px 10px $sharp-shadow) drop-shadow(-7px 0 10px $sharp-shadow);
+    }
+
+    div.formPlaceholder {
+        height: 500px;
+    }
+
+    form {
+        font-size: large;
+        width: 100%;
+        max-width: 500px;
+        label, input, textarea {
+            width: 100%;
+        }
+        button {
+            background-color: $text-color;
+            border: $text-color-shadow;
+            color: $bg-color;
+        }
+        button:hover {
+            background-color: $text-color-shadow;
+        }
+    }
+}
+
+.messageModal {
+    color: $bg-color;
+    background-color: $text-color;
+    position: fixed;
+    top: 30vh;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px black;
 }
 
 @include media-breakpoint-up(sm) {
@@ -145,7 +186,7 @@ main {
         margin-left: 10%;
     }
     
-    #work h2, #social h2 {
+    #work h2, #contact h2 {
         margin-left: 10%;
     }
 
@@ -157,6 +198,12 @@ main {
             width: 344px;
             height: 258px;
             margin: 10px auto;
+        }
+    }
+
+    #contact {
+        form {
+            width: 55%;
         }
     }
 }
@@ -201,15 +248,6 @@ main {
         .frame .inner {
             transform: translateY(-1px);    
         }
-    }
-
-    #social a {
-        text-shadow: 7px 0 10px transparent, 0 -7px 10px transparent, 0 7px 10px transparent, -7px 0 10px transparent;
-        transition: 300ms;
-    }
-
-    #social a:hover {
-        text-shadow: 7px 0 10px $sharp-shadow, 0 -7px 10px $sharp-shadow, 0 7px 10px $sharp-shadow, -7px 0 10px $sharp-shadow;
     }
 
 /* animation on h1 */
@@ -278,7 +316,9 @@ main {
         transform: translateY(-130%);
         transition: 1500ms 1125ms;
     }
-
+    .swing * {
+        cursor: default;
+    }
 }
 
 @keyframes bg-circle {
@@ -302,40 +342,3 @@ main {
         background-color: $text-color;
     }
 }
-
-/* image ratio 4:3 */
-/* #memoryHighscores {
-    background-image: url(../images/memoryHighscores.png);
-}
-
-#movieapp {
-    background-image: url(../images/MovieReactApp.png);
-}
-
-#codelicious {
-    background-image: url(../images/codelicious.png);
-}
-
-#germanquiz {
-    background-image: url(../images/GermanQuiz.png);
-}
-
-#bangwa {
-    background-image: url(../images/bangwa.png);
-}
-
-#drcarrot {
-    background-image: url(../images/drcarrot.png);
-}
-
-#animations {
-    background-image: url(../images/animations.png);
-}
-
-#functions {
-    background-image: url(../images/functions.png);
-}
-
-#design {
-    background-image: url(../images/design.png);
-} */
