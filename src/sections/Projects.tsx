@@ -1,5 +1,6 @@
 import ProjectFrame from '../components/ProjectFrame';
 import memoryHigh from '../images/memoryHighscores.png';
+import tictactoe from '../images/tictactoe.png';
 import drCarrot from '../images/drCarrot.png';
 import expore from '../images/expore.png';
 import wdClasses from '../images/wdClasses.png';
@@ -20,6 +21,12 @@ export default function Projects () {
 				title={'Memory Game with High Scores'}
 				description={'React + Express + MongoDB: Memory game that stores the highest \
 					scores in a Mongo database.'}
+			/>
+			<ProjectFrame 
+				image={tictactoe}
+				link={'https://andreglock.github.io/tictactoe/'} 
+				title={'Tic Tac Toe'}
+				description={'Play Tic Tac Toe against an AI, made with React and Redux.'}
 			/>
 			<ProjectFrame 
 				image={drCarrot}
