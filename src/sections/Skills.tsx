@@ -7,8 +7,8 @@ export default function Skills () {
             <h3 className="p-2">Languages I speak</h3>
             <ul>
                 <SkillBadge skill={'HTML'} level={5} />
-                <SkillBadge skill={'CSS / SASS'} level={5} />
-                <SkillBadge skill={'JavaScript'} level={5} />
+                <SkillBadge skill={'CSS / SCSS'} level={5} />
+                <SkillBadge skill={'JavaScript / TypeScript'} level={5} />
                 <SkillBadge skill={'Python'} level={4} />
                 <SkillBadge skill={'C'} level={2} />
             </ul>
