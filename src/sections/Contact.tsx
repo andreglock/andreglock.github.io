@@ -21,7 +21,7 @@ export default function Contact () {
                 </a>
             </div>
             <div>
-                <a href="https://www.linkedin.com/in/andr%C3%A9-s-g-lorenzoni-834a672a/" target="blank">
+                <a href="https://www.linkedin.com/in/andreglock/" target="blank">
                     <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
             </div>
