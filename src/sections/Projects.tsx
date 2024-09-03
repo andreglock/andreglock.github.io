@@ -17,7 +17,7 @@ export default function Projects () {
 		<div className="pages mx-auto">
 			<ProjectFrame 
 				image={memoryHigh}
-				link={'https://memory-game-scores.herokuapp.com/'} 
+				link={'https://memogame.onrender.com'} 
 				title={'Memory Game with High Scores'}
 				description={'React + Express + MongoDB: Memory game that stores the highest \
 					scores in a Mongo database.'}
@@ -36,7 +36,7 @@ export default function Projects () {
 			/>
 			<ProjectFrame 
 				image={expore}
-				link={'http://expore.herokuapp.com/'} 
+				link={'https://expore.onrender.com/'} 
 				title={'Expore'}
 				description={'React + Express + MongoDB: Universe builder tool. Done in a two \
 					person team, this was the final project of a Fullstack intensive training'}
