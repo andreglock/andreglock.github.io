@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="315" viewBox="0 0 420 315">
+  <rect width="420" height="315" fill="#14213D" />
+  <g transform="translate(210,157.5) scale(3.4) translate(-60,-44)">
+    <!-- timer dial -->
+    <path
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="6"
+      d="M73,55 a19,19 0 1,0 -38,0 a19,19 0 1,0 38,0 z" />
+    <!-- interval progress arc -->
+    <path
+      fill="none"
+      stroke="#FF6B35"
+      stroke-width="6"
+      stroke-linecap="round"
+      d="M54,36 A19,19 0 0,1 70.45,64.5" />
+    <!-- crown stem -->
+    <path fill="#FFFFFF" d="M51,28 L57,28 L57,36 L51,36 Z" />
+    <!-- crown cap -->
+    <path fill="#FFFFFF" d="M46,23 L62,23 L62,28 L46,28 Z" />
+    <!-- clock hand -->
+    <path
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="4"
+      stroke-linecap="round"
+      d="M54,55 L64.72,46" />
+    <!-- center dot -->
+    <path fill="#FFFFFF" d="M57.5,55 a3.5,3.5 0 1,0 -7,0 a3.5,3.5 0 1,0 7,0 z" />
+    <!-- beep sound waves -->
+    <path
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="3"
+      stroke-linecap="round"
+      d="M80.87,29.91 A5,5 0 0,1 80.87,38.09" />
+    <path
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="3"
+      stroke-linecap="round"
+      d="M82.59,27.45 A8,8 0 0,1 82.59,40.55" />
+  </g>
+</svg>

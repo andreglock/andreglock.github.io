@@ -8,6 +8,7 @@ import germanQuizCards from "../images/germanQuizCards.png";
 import bangwa from "../images/bangwa.png";
 import backToTheBurger from "../images/backToTheBurger.png";
 import movieApp from "../images/movieApp.png";
+import intervalBeeper from "../images/intervalBeeper.svg";
 
 export default function Projects() {
   return (
@@ -15,6 +16,14 @@ export default function Projects() {
       <h2 className="p-2">Check out my web pages and projects</h2>
       <h3>Projects on render may take up to 30 seconds to load</h3>
       <div className="pages mx-auto">
+        <ProjectFrame
+          image={intervalBeeper}
+          link={process.env.PUBLIC_URL + "/interval-beeper.apk"}
+          title={"Interval Beeper (Android)"}
+          description={
+            "Interval beeper android app built with Kotlin. Click to download."
+          }
+        />
         <ProjectFrame
           image={memoryHigh}
           link={"https://memogame.onrender.com"}
