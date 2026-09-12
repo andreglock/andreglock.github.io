@@ -18,10 +18,10 @@ export default function Projects() {
       <div className="pages mx-auto">
         <ProjectFrame
           image={intervalBeeper}
-          link={process.env.PUBLIC_URL + "/interval-beeper.apk"}
+          link={"https://play.google.com/store/apps/details?id=io.github.andreglock.intervalbeeper"}
           title={"Interval Beeper (Android)"}
           description={
-            "Interval beeper android app built with Kotlin. Click to download."
+            "Interval beeper android app built with Kotlin."
           }
         />
         <ProjectFrame
